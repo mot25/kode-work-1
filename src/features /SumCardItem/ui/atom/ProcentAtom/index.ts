@@ -1,0 +1,1 @@
+export { default as ProcentAtom } from './ProcentAtom'

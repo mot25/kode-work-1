@@ -1,0 +1,1 @@
+export { default as SumCardItemTempaltes } from './ui/templates/SumCardItemTempaltes/SumCardItemTempaltes'

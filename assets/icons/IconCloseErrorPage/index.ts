@@ -1,0 +1,1 @@
+export { default as IconCloseErrorPage } from './SvgComponent'

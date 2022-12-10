@@ -1,0 +1,1 @@
+export { default as StubName } from './ui/StubName'

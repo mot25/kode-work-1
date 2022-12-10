@@ -1,0 +1,1 @@
+export { default as MyALertProvider } from '../../app/providers/MyAlertProvider/MyALertProvider'

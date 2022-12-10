@@ -1,0 +1,1 @@
+export { default as CategoryListOrganisms } from './ui/organisms/CategoryListOrganisms/CategoryListOrganisms'

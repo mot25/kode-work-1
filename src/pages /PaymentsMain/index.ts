@@ -1,0 +1,1 @@
+export { default as PaymentsMainOrganisms } from './ui/organisms/PaymentsMainOrganisms/PaymentsMainOrganisms'

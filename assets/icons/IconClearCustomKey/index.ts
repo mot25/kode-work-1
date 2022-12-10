@@ -1,0 +1,1 @@
+export { default as IconClearCustomKey } from './SvgComponent'

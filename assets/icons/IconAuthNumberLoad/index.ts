@@ -1,0 +1,1 @@
+export { default as IconAuthNumberLoad } from './SvgComponent'
