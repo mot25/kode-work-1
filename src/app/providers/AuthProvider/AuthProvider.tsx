@@ -1,7 +1,8 @@
 import { AStorage } from '@shared/lib/AStorage';
-import { resetCodeOpt } from 'pages /AuthNumber/model/stateAuthNumber';
-import { resetAllAccesCode } from 'pages /CodeAcces/model/stateCodeAcces';
+
 import React, { createContext, PropsWithChildren, PropsWithRef, useState } from 'react';
+import { resetCodeOpt } from '../../../pages/AuthNumber/model/stateAuthNumber';
+import { resetAllAccesCode } from '../../../pages/CodeAcces/model/stateCodeAcces';
 
 type TAuthContextType = {
     isAuth: boolean;
@@ -17,7 +18,7 @@ type Props = PropsWithChildren & {}
 
 const AuthProvider = ({ children }: Props) => {
     // почему не эффектор, потому мне кажется будет хорошим тоном, изменять такую
-    // информацию как авторизация, через определенный метод 
+    // информацию как авторизация, через определенный метод
     const [isAuth, setIsAuth] = useState<boolean>(false);
     const [isLoading, setIsLoading] = useState<boolean>(true);
 

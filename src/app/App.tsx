@@ -7,13 +7,13 @@ import { CTouchableOpacity } from '@shared/ui/CTouchableOpacity';
 import { WrapperApplication } from '@shared/ui/WrapperApplication';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
-import { MyALertProvider } from 'features /MyALertProvider';
 import { useCallback, useContext, useState } from 'react';
 import { Text } from 'react-native';
 import { AlertNotificationRoot } from 'react-native-alert-notification';
 import styled from 'styled-components/native';
 
 import { Storybook } from '../../.storybook';
+import { MyALertProvider } from '../features/MyALertProvider';
 import { MainTab } from './app-navigate/MainTab';
 import { ApiProvider } from './providers/ApiProvider';
 import { AppThemeProvider } from './providers/AppThemeProvider';
@@ -59,22 +59,22 @@ function App({ }) {
     if (!isStorybookClosed) {
         return (
             // <ErrorBoundary>
-                <AlertNotificationRoot>
-                    <ApiProvider>
-                        <RouterProvider>
-                            <AppThemeProvider>
-                                <WrapperApplication
-                                    onLayoutRootView={onLayoutRootView}
-                                >
-                                    <Storybook />
-                                    <StorybookButton onPress={() => setStorybookClosed(true)}>
-                                        <StorybookButtonText>OPEN APP</StorybookButtonText>
-                                    </StorybookButton>
-                                </WrapperApplication>
-                            </AppThemeProvider>
-                        </RouterProvider>
-                    </ApiProvider>
-                </AlertNotificationRoot>
+            <AlertNotificationRoot>
+                <ApiProvider>
+                    <RouterProvider>
+                        <AppThemeProvider>
+                            <WrapperApplication
+                                onLayoutRootView={onLayoutRootView}
+                            >
+                                <Storybook />
+                                <StorybookButton onPress={() => setStorybookClosed(true)}>
+                                    <StorybookButtonText>OPEN APP</StorybookButtonText>
+                                </StorybookButton>
+                            </WrapperApplication>
+                        </AppThemeProvider>
+                    </RouterProvider>
+                </ApiProvider>
+            </AlertNotificationRoot>
             // </ErrorBoundary>
         );
     }

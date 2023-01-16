@@ -4,9 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { isShowTabBarFromName } from '@shared/lib/helpersByNavigation';
 import { TabOptionsLabel } from '@shared/lib/TabOptionsLabel';
 import { darkTheme } from '@shared/ui/theme';
-import { CashMachine } from 'pages /CashMachine';
-import { MainPage } from 'pages /MainPage';
-import { Profile } from 'pages /Profile';
+
+
 import React from 'react';
 import { StyleSheet } from 'react-native';
 
@@ -14,6 +13,9 @@ import { IconCashMachine } from '../../../../assets/icons/IconCashMachine';
 import { IconMainPage } from '../../../../assets/icons/IconMainPage';
 import { IconPayments } from '../../../../assets/icons/IconPayments';
 import { IconProfile } from '../../../../assets/icons/IconProfile';
+import { CashMachine } from '../../../pages/CashMachine';
+import { MainPage } from '../../../pages/MainPage';
+import { Profile } from '../../../pages/Profile';
 import { ERouteName, NavMainTabsParamsType, NavPaymentsParamsType, translateLabel } from '../config/types';
 
 
@@ -27,20 +29,17 @@ const MainTab = () => {
 
     <Tab.Navigator
       screenOptions={{
-        
+
         headerShown: false,
         tabBarStyle: styles.tabBar,
       }}
-      defaultScreenOptions={{
-
-}}
       sceneContainerStyle={styles.root}
       initialRouteName='PaymentsListStack'
     >
       <Tab.Screen name={ERouteName.MAINPAGE}
         options={{
           tabBarIcon: ({ focused }) => <IconMainPage focused={focused} />,
-          tabBarLabel: ({ focused }) => TabOptionsLabel(focused, translateLabel.MainPage),         
+          tabBarLabel: ({ focused }) => TabOptionsLabel(focused, translateLabel.MainPage),
         }}
         component={MainPage} />
       <Tab.Screen name={ERouteName.PAYMENTSLISTSTACK}

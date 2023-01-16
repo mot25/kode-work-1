@@ -1,11 +1,11 @@
 import { createNativeStackNavigator, NativeStackNavigationOptions } from '@react-navigation/native-stack';
 import { HeaderBackButton } from '@shared/ui/HeaderBackButton';
 import { darkTheme } from '@shared/ui/theme';
-import CategoryList from 'pages /CategoryList/ui/CategoryList';
-import PaymentsMain from 'pages /PaymentsMain/ui/PaymentsMain';
-import { Services } from 'pages /Services';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
+import CategoryList from '../../../pages/CategoryList/ui/CategoryList';
+import PaymentsMain from '../../../pages/PaymentsMain/ui/PaymentsMain';
+import { Services } from '../../../pages/Services';
 
 import { NavPaymentsParamsType } from '../config/types';
 
@@ -62,5 +62,3 @@ const PaymentsStacks = () => {
 }
 
 export default PaymentsStacks
-
-

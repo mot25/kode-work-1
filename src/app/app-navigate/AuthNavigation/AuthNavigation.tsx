@@ -1,12 +1,12 @@
 import { NavRootParamsType } from '@app/app-navigate/config/types';
 import { createNativeStackNavigator, NativeStackNavigationOptions } from '@react-navigation/native-stack';
 import { darkTheme } from '@shared/ui/theme';
-import { AuthNumber } from 'pages /AuthNumber';
-import { CodeAcces } from 'pages /CodeAcces';
-import { PasswordPage } from 'pages /PasswordPage';
-import { TechnicalPage } from 'pages /TechnicalPage';
+
 import React from 'react';
 import { View } from 'react-native';
+import { AuthNumber } from '../../../pages/AuthNumber';
+import { CodeAcces } from '../../../pages/CodeAcces';
+import { PasswordPage } from '../../../pages/PasswordPage';
 
 const StackPayments = createNativeStackNavigator<NavRootParamsType>();
 type Props = {}
